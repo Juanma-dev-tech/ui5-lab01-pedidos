@@ -1,0 +1,71 @@
+{
+  "sap.app": {
+    "id": "demo.fiori.pedidos",
+    "type": "application",
+    "title": "Demo Pedidos",
+    "description": "Aplicación demo Fiori/UI5 para visualizar pedidos",
+    "i18n": "i18n/i18n.properties"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "demo.fiori.pedidos.view.Main",
+      "type": "XML",
+      "id": "Main"
+    },
+    "dependencies": {
+      "minUI5Version": "1.120",
+      "libs": {
+        "sap.m": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "orders": {
+        "type": "sap.ui.model.json.JSONModel"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "demo.fiori.pedidos.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "Main",
+          "pattern": "",
+          "target": "Main"
+        },
+        {
+          "name": "Detail",
+          "pattern": "detail/{OrderID}",
+          "target": "Detail"
+        }
+      ],
+      "targets": {
+        "Main": {
+          "viewName": "Main",
+          "viewLevel": 1
+        },
+        "Detail": {
+          "viewName": "Detail",
+          "viewLevel": 2
+        }
+      }
+    }
+  }
+}

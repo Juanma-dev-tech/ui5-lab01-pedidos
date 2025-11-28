@@ -1,0 +1,28 @@
+{
+  "orders": [
+    {
+      "OrderID": "50000001",
+      "Customer": "Yamaha Argentina",
+      "Status": "Abierto",
+      "NetValue": 150000.5,
+      "Currency": "ARS",
+      "CreatedAt": "2025-11-01"
+    },
+    {
+      "OrderID": "50000002",
+      "Customer": "Honda Motos",
+      "Status": "Facturado",
+      "NetValue": 230000,
+      "Currency": "ARS",
+      "CreatedAt": "2025-11-02"
+    },
+    {
+      "OrderID": "50000003",
+      "Customer": "Cliente Prueba SD",
+      "Status": "Entregado",
+      "NetValue": 98000,
+      "Currency": "ARS",
+      "CreatedAt": "2025-11-03"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<mvc:View
+  controllerName="demo.fiori.pedidos.controller.Detail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout.form">
+
+  <Page
+    title="Detalle de pedido"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+
+    <content>
+      <VBox class="sapUiSmallMargin">
+
+        <!-- Cabecera del pedido -->
+        <ObjectHeader
+          title="{order>/OrderID}"
+          intro="{order>/Customer}"
+          number="{
+            parts: [
+              'order>/NetValue',
+              'order>/Currency'
+            ],
+            formatter: '.formatCurrency'
+          }"
+          numberUnit="{order>/Currency}">
+          <statuses>
+            <ObjectStatus text="{order>/Status}" />
+          </statuses>
+        </ObjectHeader>
+
+        <!-- Título de sección -->
+        <Toolbar class="sapUiSmallMarginTop">
+          <Title text="Datos del pedido" level="H3" />
+        </Toolbar>
+
+        <!-- Formulario con datos -->
+        <l:SimpleForm
+          editable="false"
+          layout="ResponsiveGridLayout"
+          class="sapUiSmallMarginTop">
+
+          <Label text="Pedido:" />
+          <Text text="{order>/OrderID}" />
+
+          <Label text="Cliente:" />
+          <Text text="{order>/Customer}" />
+
+          <Label text="Estado:" />
+          <Text text="{order>/Status}" />
+
+          <Label text="Importe neto:" />
+          <Text text="{
+            parts: [
+              'order>/NetValue',
+              'order>/Currency'
+            ],
+            formatter: '.formatCurrency'
+          }" />
+
+          <Label text="Fecha de creación:" />
+          <Text text="{order>/CreatedAt}" />
+
+        </l:SimpleForm>
+
+      </VBox>
+    </content>
+
+  </Page>
+</mvc:View>

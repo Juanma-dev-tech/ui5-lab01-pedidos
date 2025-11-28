@@ -1,0 +1,27 @@
+<mvc:View
+  controllerName="demo.fiori.pedidos.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <App id= "app">
+    <Page title="Pedidos (Demo UI5)">
+      <content>
+        <List
+          id="ordersList"
+          headerText="Pedidos de venta"
+          items="{
+            path: 'orders>/orders'
+          }">
+          <StandardListItem
+            type="Active"
+            press=".onListItemPress"
+            title="{orders>OrderID}"
+            description="{orders>Customer}"
+            info="{orders>Status}"
+            infoState="Success" />
+        </List>
+      </content>
+    </Page>
+  </App>
+
+</mvc:View>
