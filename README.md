@@ -79,6 +79,7 @@ Ejemplo:
 ```
 docs/lista.png
 docs/detalle.png
+docs/preview.gif
 ```
 
 ## 🧠 Conceptos SAPUI5 aplicados
