@@ -1,4 +1,7 @@
 ![Fiori Developer in Progress](https://img.shields.io/badge/Fiori%20Developer-In%20Progress-0FAAFF?style=for-the-badge&logo=sap&logoColor=white)
+<p align="center">
+  <img src="docs/preview.gif" width="85%" alt="Demo SAPUI5 Master Detail" />
+</p>
 
 # SAPUI5 Lab 01 — Lista + Detalle con JSONModel y Routing
 
